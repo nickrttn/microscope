@@ -21,3 +21,4 @@ twbs:bootstrap
 underscore
 fourseven:scss
 iron:router
+sacha:spin
