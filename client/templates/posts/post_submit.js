@@ -8,15 +8,13 @@ Template.postSubmit.events({
 		};
 
 		Meteor.call('postInsert', post, function(error, result) {
-			if(error) {
+			if(error)
 				return alert(error.reason);
-			}
 
-			if(result.postExists) {
+			if(result.postExists) 
 				alert('This link has already been posted');
-			}
 
-			Router.go('postPage', {_id: result._id});
+			Router.go('postsList');
 		});
 	}
 });
