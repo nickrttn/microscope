@@ -12,8 +12,6 @@ Template.postEdit.events({
 		Posts.update(currentPostId, {$set: postProperties}, function(error) {
 			if (error) {
 				alert(error.reason);
-			} else if (Posts.findOne({url: postProperties.url})){
-				alert('There\'s already a post with that URL.');
 			} else {
 				Router.go('postPage', {_id: currentPostId});
 			}
